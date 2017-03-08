@@ -61,11 +61,10 @@ console.log(isItEnabled(preview));
 */
 function makeItTrue(sos) {
 	console.log(sos);
-	//console.log(data.pop);
 
 }
 
-console.log(makeItTrue(preview));
+
 /*
 * Function that retrieves the urls only from the key "resolutions" 
 * , stores the values in an array called "urls", and returns the created array
