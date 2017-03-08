@@ -38,14 +38,34 @@ var preview = {
 * 			string
 * Return 	isEnabled (string)
 */
+function isItEnabled(data){
+	console.log(data);
+	var isEnabled = " ";
+	for (var key in data) {
+		//console.log(key);
+		//console.log(data[key]);
+		if (key === "enabled") {
+			isEnabled += data[key];
+		}
+	}
+	console.log(typeof isEnabled);
+	return isEnabled;
+}
 
+console.log(isItEnabled(preview));
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
 * the value from the key "enabled"
 *
 * Return 	value from key enabled (boolean)
 */
+function makeItTrue(sos) {
+	console.log(sos);
+	//console.log(data.pop);
 
+}
+
+console.log(makeItTrue(preview));
 /*
 * Function that retrieves the urls only from the key "resolutions" 
 * , stores the values in an array called "urls", and returns the created array
