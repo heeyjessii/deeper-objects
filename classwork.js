@@ -38,31 +38,43 @@ var preview = {
 * 			string
 * Return 	isEnabled (string)
 */
-function isItEnabled(data){
-	console.log(data);
-	var isEnabled = " ";
-	for (var key in data) {
-		//console.log(key);
-		//console.log(data[key]);
-		if (key === "enabled") {
-			isEnabled += data[key];
-		}
-	}
-	console.log(typeof isEnabled);
-	return isEnabled;
-}
+// function isItEnabled(data){
+// 	//console.log(data);
+// 	var isEnabled = "";
+// 	for (var key in data) {
+// 		//console.log(key);
+// 		//console.log(data[key]);
+// 		if (key === "enabled") {
+// 			isEnabled += data[key];
+// 		}
+// 	}
+// 	console.log(typeof isEnabled);
+// 	return isEnabled;
+// }
 
-console.log(isItEnabled(preview));
+// console.log(isItEnabled(preview));
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
 * the value from the key "enabled"
 *
 * Return 	value from key enabled (boolean)
 */
-function makeItTrue(sos) {
-	console.log(sos);
+// function returnEnabled(data) {
+// 	//console.log(data.enabled);
+// 	data.enabled = true;
+// 	//data.enabled = true;
+// 	//return data.enabled;
+// 	for( var key in data){
+// 		//console.log(data[key]);
+// 		if (key === "enabled") {
+// 			data[key] = true;
+// 		}
+// 		return data.enabled
+// 	}
 
-}
+// }
+
+// console.log(returnEnabled(preview));
 
 
 /*
@@ -71,7 +83,29 @@ function makeItTrue(sos) {
 * 
 * Return 	urls (array)
 */
+function getUrl(data) {
+	var dataResolutions = data.images[0].resolutions;
+	for (var i = 0; i < dataResolutions.length; i++) {
+		console.log(dataResolutions[i]);
+		for (var key in dataResolutions[i]){
+			console.log(key);
+			if (key === "url") {
+				urls.push(dataResolutions[i][key]);
+				console.log(urls);
+			}
+		}
+	}
+	//console.log(data);
+	// var url = [];
+	// // console.log(data.images[0].resolutions);
+	// for (var key in data.images[0].resolutions) {
+	// 	console.log(data.images[0].resolutions[key].url);
+	// 	//url.push(data.images[0].resolutions[key].url);
+	// }
+	return urls;
+}
 
+console.log(getUrl(preview));
 /*
 * Function that retrieves the first nested key and value pairing
 * from the values of "images", stores them in a new object called 
@@ -84,3 +118,9 @@ function makeItTrue(sos) {
 *
 * Return 	allKeyValuePairs (object)
 */
+
+function retrieveNestedKey(data) {
+	console.log(data);
+}
+
+retrieveNestedKey(preview);
