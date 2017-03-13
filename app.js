@@ -4,7 +4,7 @@
 */
 function accessObjectInArray(arr){
 	//Print the parameter being passed through
-	//console.log(arr);
+	console.log(arr);
 
 	//How can we tell what type of data this is?
 	//By it's notation, the top level is bracket notation, therefore the parameter is an array

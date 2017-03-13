@@ -95,13 +95,13 @@ function getUrl(data) {
 			}
 		}
 	}
-	//console.log(data);
-	// var url = [];
-	// // console.log(data.images[0].resolutions);
-	// for (var key in data.images[0].resolutions) {
-	// 	console.log(data.images[0].resolutions[key].url);
-	// 	//url.push(data.images[0].resolutions[key].url);
-	// }
+	console.log(data);
+	var url = [];
+	// console.log(data.images[0].resolutions);
+	for (var key in data.images[0].resolutions) {
+		console.log(data.images[0].resolutions[key].url);
+		//url.push(data.images[0].resolutions[key].url);
+	}
 	return urls;
 }
 
